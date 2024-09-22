@@ -1,0 +1,273 @@
+.header {
+  padding: 2vw 13vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e1f217e;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  width: 18vw;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+}
+
+.navLink {
+  font-size: 1vw;
+  font-weight: 700;
+  color: white;
+  transition: color 500ms ease;
+}
+
+.navLink:hover {
+  color: #26AAE1
+}
+
+.navLink:first-of-type {
+  color: #26AAE1;
+}
+
+.sectionMain {
+  height: 50vw;
+  padding: 0 13vw 7vw 13vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.mainText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.mainText p {
+  color: rgb(206, 206, 206);
+}
+
+.blue {
+  color: #26AAE1
+}
+
+.sectionPrinters {
+  padding: 6vw 13vw;
+}
+
+.printersText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3vw;
+}
+
+.printersDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.printersDescription p {
+  font-size: 1vw;
+}
+
+.industriesList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1vw;
+}
+
+.industriesList li {
+  position: relative;
+  padding-left: 1vw;
+}
+
+.industriesList li p {
+  font-weight: 600;
+}
+
+.industriesList li::before {
+  content: "•";
+  color: #26aae1;
+  font-size: 2vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.printersPrinters {
+  margin-top: 4vw;
+}
+
+.printersList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.printersListEl {
+  -webkit-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 1vh;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22vw;
+}
+
+.printer1 {
+  width: 15vw;
+  height: 19vw;
+}
+
+.printer2 {
+  width: 18vw;
+  height: 19vw;
+}
+
+.printer3 {
+  width: 12vw;
+  height: 19vw;
+}
+
+.printersListEl h3 {
+  margin-top: 2vw;
+  align-self: flex-start;
+}
+
+.printersListEl div {
+  align-self: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5vw;
+}
+
+.printersListEl div a {
+  font-size: 1vw;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: scale 500ms ease;
+}
+
+.printersListEl div a:hover {
+  scale: 1.05;
+}
+
+.printersListEl div button {
+  background-color: #ffffff00;
+  border: 1px solid #26AAE1;
+  font-size: 1vw;
+  font-weight: 400;
+  padding: 0.7vw 1.8vw;
+}
+
+.printersListEl div button:hover {
+  scale: 1.04;
+}
+
+.sectionEvents {
+  padding: 6vw 13vw;
+  background-color: #171616;
+}
+
+.sectionGallery {
+  padding: 6vw 13vw;
+}
+
+.sectionConsultationForm {
+  padding: 6vw 13vw;
+  background-color: #171616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionConsultationForm h2 {
+  font-size: 2.7vw;
+  font-weight: 500;
+}
+
+.consultationForm {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consultationFormData {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+}
+
+.consultationFormData input {
+  padding: 1.2vw;
+  border-radius: 100vw;
+  border: 2px solid white;
+  background-color: hsla(0, 0%, 100%, 0);
+  font-size: 1vw;
+  font-weight: 400;
+  color: rgb(202, 202, 202);
+}
+
+.consultationFormData input::placeholder {
+  color: rgb(202, 202, 202);
+}
+
+.consultationFormCheckbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2vw;
+  cursor: pointer;
+}
+
+.consultationFormCheckbox input[type="checkbox"] {
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.3vh;
+}
+
+.consultationFormCheckbox input[type="checkbox"]:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.consultationFormCheckbox input[type="checkbox"]:checked {
+  background-color: #26AAE1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.consultationFormCheckbox input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  font-size: 0.8vw;
+}
+
+.consultationFormCheckbox label {
+  margin-left: 0.6vw;
+  background-color: hsla(0, 0%, 100%, 0);
+  font-size: 1vw;
+  cursor: pointer;
+}
