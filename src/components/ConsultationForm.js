@@ -5,12 +5,25 @@ const ConsultationForm = () => {
     <section className={styles.sectionConsultationForm} id="consultationForm">
       <h2>ПОЛУЧИТЕ КОНСУЛЬТАЦИЮ ОНЛАЙН</h2>
       <form className={styles.consultationForm}>
-        <div className={styles.consultationFormData}>
-          <input placeholder="Электронная почта" type="email" />
-          <input placeholder="Имя" type="text" />
-          <input placeholder="Телефон" type="phone" />
-          <button>Оставить заявку</button>
-        </div>
+        <input
+          className={styles.consultationFormInput}
+          placeholder="Электронная почта"
+          type="email"
+          required
+        />
+        <input
+          className={styles.consultationFormInput}
+          placeholder="Имя"
+          type="text"
+          required
+        />
+        <input
+          className={styles.consultationFormInput}
+          placeholder="Телефон"
+          type="phone"
+          required
+        />
+        <button>Оставить заявку</button>
         <div className={styles.consultationFormCheckbox}>
           <input type="checkbox" id="consentCheckbox" />
           <label htmlFor="consentCheckbox">

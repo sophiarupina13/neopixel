@@ -5,6 +5,8 @@ import Main from "@/components/Main";
 import Printers from "@/components/Printers";
 import Events from "@/components/Events";
 import Gallery from "@/components/Gallery";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
         <Events />
         <Gallery />
         <ConsultationForm />
+        <FAQ />
       </main>
+      <Footer />
     </div>
   );
 }
