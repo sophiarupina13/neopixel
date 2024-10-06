@@ -164,8 +164,8 @@ const Events = () => {
           <Image
             src={events[currentIndex].image}
             alt={events[currentIndex].title}
-            width={800}
-            height={550}
+            width={620}
+            height={470}
             className={styles.image}
           />
         </div>

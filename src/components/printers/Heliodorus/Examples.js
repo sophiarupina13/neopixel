@@ -1,48 +1,48 @@
 "use client";
-import styles from "../app/page.module.css";
+import styles from "../../../app/page.heliodorus.module.css";
 import { useState } from "react";
 import Image from "next/image";
 
 const pictures = [
   {
     id: 1,
-    image: "/img/gallery1.png",
+    image: "/img/printers/example_1.png",
   },
   {
     id: 2,
-    image: "/img/gallery2.png",
+    image: "/img/printers/example_2.png",
   },
   {
     id: 3,
-    image: "/img/gallery3.png",
+    image: "/img/printers/example_3.png",
   },
   {
     id: 4,
-    image: "/img/gallery4.png",
+    image: "/img/printers/example_4.png",
   },
   {
     id: 5,
-    image: "/img/gallery5.png",
+    image: "/img/printers/example_5.png",
   },
   {
     id: 6,
-    image: "/img/gallery6.png",
+    image: "/img/printers/example_6.png",
   },
   {
     id: 7,
-    image: "/img/gallery7.png",
+    image: "/img/printers/example_7.png",
   },
   {
     id: 8,
-    image: "/img/gallery8.png",
+    image: "/img/printers/example_8.png",
   },
   {
     id: 9,
-    image: "/img/gallery9.png",
+    image: "/img/printers/example_9.png",
   },
 ];
 
-const Gallery = () => {
+const Examples = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleScroll = (direction) => {
@@ -56,9 +56,9 @@ const Gallery = () => {
   const visiblePictures = pictures.slice(currentIndex, currentIndex + 3);
 
   return (
-    <section className={styles.sectionGallery}>
+    <section className={styles.sectionExamples} id="examples">
       <div>
-        <h2>ГАЛЕРЕЯ</h2>
+        <h2>ПРИМЕРЫ ИЗДЕЛИЙ</h2>
         <div className={styles.border}></div>
       </div>
       <ul className={styles.picturesList}>
@@ -67,9 +67,9 @@ const Gallery = () => {
             <Image
               src={picture.image}
               alt="photo gallery"
-              width={500}
-              height={380}
-              className={styles.galleryImage}
+              width={400}
+              height={420}
+              className={styles.examplesImage}
             />
           </li>
         ))}
@@ -98,4 +98,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Examples;

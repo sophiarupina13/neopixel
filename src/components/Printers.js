@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../app/page.module.css";
+import Link from "next/link";
 
 const Printers = () => {
   return (
@@ -55,7 +56,9 @@ const Printers = () => {
             />
             <h3>Ruby (R Lite / R Pro)</h3>
             <div>
-              <a>Подробнее</a>
+              <Link href="/printers/ruby" legacyBehavior>
+                <a className={styles.moreLink}>Подробнее</a>
+              </Link>
               <button>Заказать</button>
             </div>
           </li>
@@ -69,7 +72,9 @@ const Printers = () => {
             />
             <h3>Sapphire (S Lite / S Pro)</h3>
             <div>
-              <a>Подробнее</a>
+              <Link href="/printers/sapphire" legacyBehavior>
+                <a className={styles.moreLink}>Подробнее</a>
+              </Link>
               <button>Заказать</button>
             </div>
           </li>
@@ -83,7 +88,9 @@ const Printers = () => {
             />
             <h3>Heliodorus (H Lite / H Pro)</h3>
             <div>
-              <a>Подробнее</a>
+              <Link href="/printers/heliodorus" legacyBehavior>
+                <a className={styles.moreLink}>Подробнее</a>
+              </Link>
               <button>Заказать</button>
             </div>
           </li>

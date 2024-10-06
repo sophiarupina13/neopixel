@@ -3,14 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import styles from "../app/page.module.css";
+import styles from "../../../app/page.sapphire.module.css";
+import classNames from 'classnames';
 
 const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["main", "printers", "events", "contacts"];
+      const sections = ["main", "characteristics", "usage", "examples", "contacts"];
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       sections.forEach((section) => {
@@ -31,13 +32,31 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        setIsTop(true);
+      } else {
+        setIsTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header className={classNames(styles.header, { [styles.transparent]: isTop })}>
       <Link href="/" legacyBehavior>
       <a>
       <Image
         alt="logo"
-        src="/img/logo.svg"
+        src="/img/logo_sapphire.svg"
         className={styles.logo}
         width={50}
         height={50}
@@ -54,20 +73,28 @@ const Header = () => {
           Главная
         </Link>
         <Link
-          href="#printers"
+          href="#characteristics"
           className={`${styles.navLink} ${
-            activeSection === "printers" ? styles.active : ""
+            activeSection === "characteristics" ? styles.active : ""
           }`}
         >
-          Принтеры
+          Характеристики
         </Link>
         <Link
-          href="#events"
+          href="#usage"
           className={`${styles.navLink} ${
-            activeSection === "events" ? styles.active : ""
+            activeSection === "usage" ? styles.active : ""
           }`}
         >
-          Мероприятия
+          Применение
+        </Link>
+        <Link
+          href="#examples"
+          className={`${styles.navLink} ${
+            activeSection === "examples" ? styles.active : ""
+          }`}
+        >
+          Примеры
         </Link>
         <Link
           href="#contacts"

@@ -28,12 +28,12 @@
   transition: color 500ms ease;
 }
 
-.navLink:hover {
-  color: #26AAE1
+.navLink.active {
+  color: #26AAE1;
 }
 
-.navLink:first-of-type {
-  color: #26AAE1;
+.navLink:hover {
+  color: #26AAE1
 }
 
 .sectionMain {
@@ -43,6 +43,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: end;
+}
+
+.sectionMain button:hover {
+  background-color: #26a9e100;
+  border: 1px solid #26AAE1;
 }
 
 .mainText {
@@ -125,6 +130,10 @@
   width: 22vw;
 }
 
+.printersListEl a {
+  color: white;
+}
+
 .printer1 {
   width: 15vw;
   height: 19vw;
@@ -175,7 +184,8 @@
 }
 
 .printersListEl div button:hover {
-  scale: 1.04;
+  background-color: #26AAE1;
+  border: none;
 }
 
 .sectionEvents {
@@ -189,9 +199,8 @@
 }
 
 .events {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 55% 45%;
 }
 
 .eventsScroller {
@@ -229,7 +238,7 @@
 }
 
 .eventsList {
-  display: flex;
+  display: grid;
   flex-direction: column;
   gap: 1vh;
 }
@@ -240,6 +249,8 @@
   -moz-box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
   padding: 1vw;
   width: 36vw;
+  background: #191919;
+  border-radius: 0.5vw;
 }
 
 .eventsList li p {
@@ -319,7 +330,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5vw;
+  gap: 0.8vw;
 }
 
 .consultationFormInput {
@@ -330,10 +341,17 @@
   font-size: 1vw;
   font-weight: 400;
   color: rgb(202, 202, 202);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.consultationFormInput:focus {
+  outline: none;
+  border: 2px solid #26AAE1;
 }
 
 .consultationFormInput::placeholder {
   color: rgb(202, 202, 202);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 .consultationFormCheckbox {
@@ -341,6 +359,15 @@
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+}
+
+.consultationForm button {
+  margin-top: 0.5vw;
+}
+
+.consultationForm button:hover {
+  background-color: #26a9e100;
+  border: 1px solid #26AAE1;
 }
 
 .consultationFormCheckbox input[type="checkbox"] {
@@ -495,10 +522,14 @@
 .contacts li {
   display: flex;
   align-items: center;
-  gap: 1.5vh;
+  gap: 0.5vh;
 }
 
 .footer p {
   font-weight: 600;
-  font-size: 1.3vw;
+  font-size: 1.4vw;
+}
+
+.footerIcon {
+  scale: 0.7;
 }

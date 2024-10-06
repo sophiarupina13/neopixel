@@ -1,48 +1,57 @@
 "use client";
-import styles from "../app/page.module.css";
+import styles from "../../../app/page.heliodorus.module.css";
 import { useState } from "react";
 import Image from "next/image";
 
 const pictures = [
   {
     id: 1,
-    image: "/img/gallery1.png",
+    image: "/img/printers/usage_1.png",
+    sphere: "Ювелирное дело",
   },
   {
     id: 2,
-    image: "/img/gallery2.png",
+    image: "/img/printers/usage_2.png",
+    sphere: "Стоматология",
   },
   {
     id: 3,
-    image: "/img/gallery3.png",
+    image: "/img/printers/usage_3.png",
+    sphere: "Машиностроение",
   },
   {
     id: 4,
-    image: "/img/gallery4.png",
+    image: "/img/printers/usage_4.png",
+    sphere: "Медицина",
   },
   {
     id: 5,
-    image: "/img/gallery5.png",
+    image: "/img/printers/usage_5.png",
+    sphere: "Автомобилестроение",
   },
   {
     id: 6,
-    image: "/img/gallery6.png",
+    image: "/img/printers/usage_6.png",
+    sphere: "Архитектура",
   },
   {
     id: 7,
-    image: "/img/gallery7.png",
+    image: "/img/printers/usage_7.png",
+    sphere: "Прототипирование",
   },
   {
     id: 8,
-    image: "/img/gallery8.png",
+    image: "/img/printers/usage_8.png",
+    sphere: "Текстильная промышленность",
   },
   {
     id: 9,
-    image: "/img/gallery9.png",
+    image: "/img/printers/usage_9.png",
+    sphere: "Обувная промышленность",
   },
 ];
 
-const Gallery = () => {
+const Usage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleScroll = (direction) => {
@@ -56,9 +65,9 @@ const Gallery = () => {
   const visiblePictures = pictures.slice(currentIndex, currentIndex + 3);
 
   return (
-    <section className={styles.sectionGallery}>
+    <section className={styles.sectionUsage} id="usage">
       <div>
-        <h2>ГАЛЕРЕЯ</h2>
+        <h2>СФЕРЫ ПРИМЕНЕНИЯ</h2>
         <div className={styles.border}></div>
       </div>
       <ul className={styles.picturesList}>
@@ -67,10 +76,11 @@ const Gallery = () => {
             <Image
               src={picture.image}
               alt="photo gallery"
-              width={500}
+              width={470}
               height={380}
-              className={styles.galleryImage}
+              className={styles.usageImage}
             />
+            <h3>{picture.sphere}</h3>
           </li>
         ))}
       </ul>
@@ -98,4 +108,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Usage;
