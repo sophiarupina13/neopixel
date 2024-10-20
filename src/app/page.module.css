@@ -1,5 +1,5 @@
 .header {
-  padding: 2vw 13vw;
+  padding: 2vw 10vw;
   display: flex;
   justify-content: space-between;
   background-color: #1e1f2198;
@@ -12,20 +12,50 @@
 }
 
 .logo {
-  width: 18vw;
+  width: 40vw;
 }
 
 .nav {
+  display: none;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenuOpen {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.527);
+  width: 100%;
+  height: 1000vw;
+  top: 0;
+  right: 0;
+}
+
+.mobileNav {
   display: flex;
-  flex-direction: row;
-  gap: 2vw;
+  flex-direction: column;
+  gap: 3vw;
+  position: fixed;
+  right: 0;
+  background-color: #1E1F21;
+  padding: 5vw 5vw 0 5vw;
+  height: 1000vw;
 }
 
 .navLink {
-  font-size: 1vw;
+  font-size: 3vw;
   font-weight: 700;
-  color: white;
   transition: color 500ms ease;
+  color: white;
 }
 
 .navLink.active {
@@ -38,11 +68,15 @@
 
 .sectionMain {
   height: 50vw;
-  padding: 0 13vw 7vw 13vw;
+  padding: 0 10vw 75vw 10vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
+}
+
+.sectionMain button {
+  margin-top: 5vw;
 }
 
 .sectionMain button:hover {
@@ -51,13 +85,19 @@
 }
 
 .mainText {
+  margin-top: 25vw;
   display: flex;
   flex-direction: column;
   gap: 1.5vw;
 }
 
+.mainText h1 {
+  text-align: center;
+}
+
 .mainText p {
   color: rgb(206, 206, 206);
+  text-align: center;
 }
 
 .blue {
@@ -65,14 +105,14 @@
 }
 
 .sectionPrinters {
-  padding: 6vw 13vw;
+  padding: 8vw 10vw;
 }
 
 .printersText {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 3vw;
+  gap: 2.5vw;
 }
 
 .printersDescription {
@@ -81,18 +121,18 @@
 }
 
 .printersDescription p {
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 .industriesList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   margin-top: 1vw;
 }
 
 .industriesList li {
   position: relative;
-  padding-left: 1vw;
+  padding-left: 2vw;
 }
 
 .industriesList li p {
@@ -109,25 +149,26 @@
 }
 
 .printersPrinters {
-  margin-top: 4vw;
+  margin-top: 6vw;
 }
 
 .printersList {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2.5vw;
+  align-items: center;
 }
 
 .printersListEl {
   -webkit-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.4);
-  border-radius: 1vh;
-  padding: 2vw;
+  border-radius: 1.5vh;
+  padding: 4vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 22vw;
+  width: 47vw;
 }
 
 .printersListEl a {
@@ -135,36 +176,36 @@
 }
 
 .printer1 {
-  width: 15vw;
-  height: 19vw;
+  width: 25vw;
+  height: 32vw;
 }
 
 .printer2 {
-  width: 18vw;
-  height: 19vw;
+  width: 33vw;
+  height: 34vw;
 }
 
 .printer3 {
-  width: 12vw;
-  height: 19vw;
+  width: 24vw;
+  height: 31vw;
 }
 
 .printersListEl h3 {
   margin-top: 2vw;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .printersListEl div {
   align-self: normal;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-top: 1.5vw;
+  margin-top: 3vw;
+  gap: 4vw;
 }
 
 .printersListEl div a {
-  font-size: 1vw;
+  font-size: 2.5vw;
   font-weight: 400;
   text-decoration: underline;
   cursor: pointer;
@@ -178,9 +219,9 @@
 .printersListEl div button {
   background-color: #ffffff00;
   border: 1px solid #26AAE1;
-  font-size: 1vw;
+  font-size: 2.8vw;
   font-weight: 400;
-  padding: 0.7vw 1.8vw;
+  padding: 2vw 5vw;
 }
 
 .printersListEl div button:hover {
@@ -189,25 +230,26 @@
 }
 
 .sectionEvents {
-  padding: 6vw 13vw;
+  padding: 8vw 10vw 0 10vw;
   background-color: #171616;
 }
 
 .border {
-  border: 3px solid rgb(236, 236, 236);
+  border: 1px solid rgb(236, 236, 236);
   margin: 0.7vw 0 2vw 0;
 }
 
 .events {
-  display: grid;
-  grid-template-columns: 55% 45%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
 }
 
 .eventsScroller {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1vw;
+  gap: 3vw;
 }
 
 .eventsScroller div {
@@ -220,16 +262,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2vw;
-  height: 2vw;
+  width: 6vw;
+  height: 6vw;
   padding: 0.5vh;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-}
-
-.eventsScroller div button:hover {
-  scale: 1;
+  scale: 3;
 }
 
 .arrow {
@@ -247,47 +286,65 @@
   box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
-  padding: 1vw;
-  width: 36vw;
+  padding: 3vw;
+  width: 70vw;
   background: #191919;
-  border-radius: 0.5vw;
+  border-radius: 1vw;
 }
 
 .eventsList li p {
-  font-size: 0.85vw;
+  font-size: 2.5vw;
   color: #838383;
 }
 
+.eventsList li p:first-of-type {
+  margin-bottom: 0.7vw;
+}
+
+.eventsList li p:last-of-type {
+  margin-top: 0.7vw;
+}
+
 .eventsList li h3 {
-  font-size: 1.05vw;
+  font-size: 2.8vw;
   font-weight: 600;
+  text-wrap: wrap;
 }
 
 .image {
   border-radius: 2.5vw;
-  scale: 1;
+  scale: 0.57;
+  margin-top: -15vw;
+  margin-left: -29vw;
 }
 
 .sectionGallery {
-  padding: 6vw 13vw;
+  padding: 8vw 10vw;
   display: flex;
   flex-direction: column;
 }
 
 .picturesList {
   display: flex;
+  flex-direction: column;
   align-self: center;
   gap: 0.7vw;
 }
 
+.picturesList li:not(:first-child) {
+  margin-top: -14vw;
+}
+
 .galleryImage {
-  border-radius: 0.6vw;
+  border-radius: 2vw;
+  scale: 0.7;
+  margin-top: -10vw;
 }
 
 .scrollers {
   display: flex;
   align-self: center;
-  margin-top: 1vw;
+  margin-top: -8vw;
 }
 
 .scrollers button {
@@ -295,16 +352,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2vw;
-  height: 2vw;
+  width: 6vw;
+  height: 3vw;
   padding: 0.5vh;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-}
-
-.scrollers button:hover {
-  scale: 1;
+  scale: 3;
 }
 
 .arrow1 {
@@ -313,7 +367,7 @@
 }
 
 .sectionConsultationForm {
-  padding: 6vw 13vw;
+  padding: 8vw 10vw;
   background-color: #171616;
   display: flex;
   flex-direction: column;
@@ -321,24 +375,26 @@
 }
 
 .sectionConsultationForm h2 {
-  font-size: 2.7vw;
+  font-size: 5vw;
   font-weight: 500;
+  text-wrap: wrap;
+  text-align: center;
 }
 
 .consultationForm {
-  margin-top: 3vw;
+  margin-top: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8vw;
+  gap: 2vw;
 }
 
 .consultationFormInput {
-  padding: 1.2vw;
+  padding: 2.4vw;
   border-radius: 100vw;
-  border: 2px solid white;
+  border: 1px solid white;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 1vw;
+  font-size: 2.6vw;
   font-weight: 400;
   color: rgb(202, 202, 202);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -346,7 +402,7 @@
 
 .consultationFormInput:focus {
   outline: none;
-  border: 2px solid #26AAE1;
+  border: 1px solid #26AAE1;
 }
 
 .consultationFormInput::placeholder {
@@ -362,7 +418,9 @@
 }
 
 .consultationForm button {
-  margin-top: 0.5vw;
+  margin-top: 2.4vw;
+  font-size: 3.3vw;
+  padding: 2.8vw 6vw;
 }
 
 .consultationForm button:hover {
@@ -372,8 +430,8 @@
 
 .consultationFormCheckbox input[type="checkbox"] {
   appearance: none;
-  width: 1vw;
-  height: 1vw;
+  width: 3vw;
+  height: 3vw;
   border: none;
   background-color: #ffffff;
   cursor: pointer;
@@ -396,35 +454,36 @@
 .consultationFormCheckbox input[type="checkbox"]:checked::before {
   content: "✔";
   color: white;
-  font-size: 16px;
-  font-size: 0.8vw;
+  font-size: 2vw;
 }
 
 .consultationFormCheckbox label {
-  margin-left: 0.6vw;
+  margin-left: 1vw;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 1vw;
+  font-size: 2.2vw;
   cursor: pointer;
 }
 
 .sectionFAQ {
-  padding: 6vw 13vw;
-}
-
-.FAQ {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  padding: 8vw 10vw;
 }
 
 .FAQ h3 {
-  font-size: 1.3vw;
+  font-size: 2.3vw;
+}
+
+.FAQList {
+  margin-top: 3vw;
 }
 
 .FAQTextOpen {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5vw;
+}
+
+.FAQTextOpen h3 {
+  font-size: 3.3vw;
 }
 
 .FAQNotButton {
@@ -440,16 +499,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2vw;
-  height: 2vw;
+  width: 3vw;
+  height: 3vw;
   padding: 0.5vh;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-}
-
-.FAQTextOpen button:hover, .FAQNotButton:hover {
-  scale: 1;
+  scale: 2.5;
 }
 
 .arrow2 {
@@ -467,10 +523,14 @@
   transition: transform 0.3s ease;
 }
 
+.FAQAnswers {
+  margin-top: 2vw;
+}
+
 .FAQ p {
-  font-size: 0.9vw;
   position: relative;
-  padding-left: 1vw;
+  padding-left: 3vw;
+  font-size: 2.4vw;
 }
 
 .FAQ p::before {
@@ -479,8 +539,7 @@
   font-size: 2vh;
   position: absolute;
   left: 0;
-  top: 0;
-  
+  top: -0.7vw;
 }
 
 .FAQText:not(:last-child) {
@@ -488,13 +547,14 @@
 }
 
 .FAQAnswers li:not(:last-child) {
-  margin-bottom: 0.2vw;
+  margin-bottom: 0.7vw;
+  margin-top: 2vw;
 }
 
 .warning {
   margin-top: 3vw;
   color: #838383;
-  font-size: 1vw;
+  font-size: 2.1vw;
   font-weight: 500;
 }
 
@@ -505,31 +565,612 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 6vw 13vw;
+  padding: 6vw 10vw;
 }
 
 .footer h1 {
   align-self: center;
   text-align: center;
+  font-size: 5.8vw;
 }
 
 .contacts {
   margin-top: 6vw;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-self: center;
 }
 
 .contacts li {
   display: flex;
   align-items: center;
-  gap: 0.5vh;
+}
+
+.contacts li:not(:last-child) {
+  margin-bottom: -4vw;
 }
 
 .footer p {
   font-weight: 600;
-  font-size: 1.4vw;
+  font-size: 2.5vw;
 }
 
 .footerIcon {
-  scale: 0.7;
+  scale: 0.4;
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    padding: 2vw 13vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1f2198;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+  
+  .logo {
+    width: 18vw;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+  
+  .navLink {
+    font-size: 1vw;
+    font-weight: 700;
+    color: white;
+    transition: color 500ms ease;
+  }
+  
+  .navLink.active {
+    color: #26AAE1;
+  }
+  
+  .navLink:hover {
+    color: #26AAE1
+  }
+
+  .mobileMenu, .menu {
+    display: none;
+  }
+  
+  .sectionMain {
+    height: 50vw;
+    padding: 0 13vw 7vw 13vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+  
+  .sectionMain button:hover {
+    background-color: #26a9e100;
+    border: 1px solid #26AAE1;
+  }
+  
+  .mainText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+
+  .mainText h1 {
+    text-align: start;
+  }
+  
+  .mainText p {
+    color: rgb(206, 206, 206);
+  }
+  
+  .blue {
+    color: #26AAE1
+  }
+  
+  .sectionPrinters {
+    padding: 6vw 13vw;
+  }
+  
+  .printersText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3vw;
+  }
+  
+  .printersDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .printersDescription p {
+    font-size: 1vw;
+  }
+  
+  .industriesList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1vw;
+  }
+  
+  .industriesList li {
+    position: relative;
+    padding-left: 1vw;
+  }
+  
+  .industriesList li p {
+    font-weight: 600;
+  }
+  
+  .industriesList li::before {
+    content: "•";
+    color: #26aae1;
+    font-size: 2vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .printersPrinters {
+    margin-top: 4vw;
+  }
+  
+  .printersList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .printersListEl {
+    -webkit-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 1vh;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22vw;
+  }
+  
+  .printersListEl a {
+    color: white;
+  }
+  
+  .printer1 {
+    width: 15vw;
+    height: 19vw;
+  }
+  
+  .printer2 {
+    width: 18vw;
+    height: 19vw;
+  }
+  
+  .printer3 {
+    width: 12vw;
+    height: 19vw;
+  }
+  
+  .printersListEl h3 {
+    margin-top: 2vw;
+    align-self: flex-start;
+  }
+  
+  .printersListEl div {
+    align-self: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5vw;
+  }
+  
+  .printersListEl div a {
+    font-size: 1vw;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: scale 500ms ease;
+  }
+  
+  .printersListEl div a:hover {
+    scale: 1.05;
+  }
+  
+  .printersListEl div button {
+    background-color: #ffffff00;
+    border: 1px solid #26AAE1;
+    font-size: 1vw;
+    font-weight: 400;
+    padding: 0.7vw 1.8vw;
+  }
+  
+  .printersListEl div button:hover {
+    background-color: #26AAE1;
+    border: none;
+  }
+  
+  .sectionEvents {
+    padding: 6vw 13vw;
+    background-color: #171616;
+  }
+  
+  .border {
+    border: 3px solid rgb(236, 236, 236);
+    margin: 0.7vw 0 2vw 0;
+  }
+  
+  .events {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  
+  .eventsScroller {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+  }
+  
+  .eventsScroller div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .eventsScroller div button {
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+    padding: 0.5vh;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    scale: 1;
+  }
+  
+  .arrow {
+    width: 1vw;
+    height: 0.7vw;
+  }
+  
+  .eventsList {
+    display: grid;
+    flex-direction: column;
+    gap: 1vh;
+  }
+  
+  .eventsList li {
+    box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 21px -5px rgba(0,0,0,0.75);
+    padding: 1vw;
+    width: 36vw;
+    background: #191919;
+    border-radius: 0.5vw;
+  }
+
+  .eventsList li p:first-of-type {
+    margin-bottom: 0;
+  }
+  
+  .eventsList li p:last-of-type {
+    margin-top: 0;
+  }
+  
+  .eventsList li p {
+    font-size: 0.85vw;
+    color: #838383;
+  }
+  
+  .eventsList li h3 {
+    font-size: 1.05vw;
+    font-weight: 600;
+  }
+  
+  .image {
+    border-radius: 2.5vw;
+    scale: 1;
+    margin-top: 0;
+    margin-left: 0;
+  }
+  
+  .sectionGallery {
+    padding: 6vw 13vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .picturesList {
+    display: flex;
+    align-self: center;
+    gap: 0.7vw;
+    flex-direction: row;
+  }
+
+  .picturesList li:not(:first-child) {
+    margin-top: 0;
+  }
+  
+  .galleryImage {
+    border-radius: 0.6vw;
+    margin-top: 0;
+    scale: 1;
+  }
+  
+  .scrollers {
+    display: flex;
+    align-self: center;
+    margin-top: 1vw;
+  }
+  
+  .scrollers button {
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+    padding: 0.5vh;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    scale: 1;
+  }
+  
+  .arrow1 {
+    width: 0.7vw;
+    height: 1vw;
+  }
+  
+  .sectionConsultationForm {
+    padding: 6vw 13vw;
+    background-color: #171616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionConsultationForm h2 {
+    font-size: 2.7vw;
+    font-weight: 500;
+  }
+  
+  .consultationForm {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8vw;
+  }
+  
+  .consultationFormInput {
+    padding: 1.2vw;
+    border-radius: 100vw;
+    border: 2px solid white;
+    background-color: hsla(0, 0%, 100%, 0);
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgb(202, 202, 202);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+  
+  .consultationFormInput:focus {
+    outline: none;
+    border: 2px solid #26AAE1;
+  }
+  
+  .consultationFormInput::placeholder {
+    color: rgb(202, 202, 202);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+  
+  .consultationFormCheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .consultationForm button {
+    margin-top: 0.5vw;
+    font-size: 1.1vw;
+    padding: 0.9vw 2.4vw;
+  }
+  
+  .consultationForm button:hover {
+    background-color: #26a9e100;
+    border: 1px solid #26AAE1;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"] {
+    appearance: none;
+    width: 1vw;
+    height: 1vw;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.3vh;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:checked {
+    background-color: #26AAE1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:checked::before {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    font-size: 0.8vw;
+  }
+  
+  .consultationFormCheckbox label {
+    margin-left: 0.6vw;
+    background-color: hsla(0, 0%, 100%, 0);
+    font-size: 1vw;
+    cursor: pointer;
+  }
+  
+  .sectionFAQ {
+    padding: 6vw 13vw;
+  }
+  
+  .FAQ {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  
+  .FAQ h3 {
+    font-size: 1.3vw;
+  }
+  
+  .FAQTextOpen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5vw;
+  }
+
+  .FAQTextOpen h3 {
+    font-size: 1.4vw;
+  }
+  
+  .FAQNotButton {
+    background-color: #ffffff00;
+    padding: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    width: 100%;
+  }
+  
+  .FAQTextOpen div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+    padding: 0.5vh;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    scale: 1;
+  }
+
+  .FAQList {
+    margin-top: 0;
+  }
+  
+  .arrow2 {
+    width: 1.2vw;
+    height: 0.7vw;
+  }
+  
+  .rotated {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .rotatedBack {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .FAQ p {
+    font-size: 0.9vw;
+    position: relative;
+    padding-left: 1vw;
+  }
+  
+  .FAQ p::before {
+    content: "•";
+    color: #26aae1;
+    font-size: 2vh;
+    position: absolute;
+    left: 0;
+    top: -0.1vw;
+  }
+  
+  .FAQText:not(:last-child) {
+    margin-bottom: 2vw;
+  }
+
+  .FAQAnswers {
+    margin-top: 0;
+  }
+  
+  
+  .FAQAnswers li:not(:last-child) {
+    margin-bottom: 0.2vw;
+    margin-top: 0vw;
+  }
+  
+  .warning {
+    margin-top: 3vw;
+    color: #838383;
+    font-size: 1vw;
+    font-weight: 500;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url('/img/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6vw 13vw;
+  }
+  
+  .footer h1 {
+    align-self: center;
+    text-align: center;
+    font-size: 3.2vw;
+  }
+  
+  .contacts {
+    margin-top: 6vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-self: normal;
+  }
+  
+  .contacts li {
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+  }
+
+  .contacts li:not(:last-child) {
+    margin-bottom: 0;
+  }
+  
+  .footer p {
+    font-weight: 600;
+    font-size: 1.4vw;
+  }
+  
+  .footerIcon {
+    scale: 0.7;
+  }
 }

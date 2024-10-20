@@ -25,7 +25,7 @@ const ConsultationForm = () => {
         />
         <button>Оставить заявку</button>
         <div className={styles.consultationFormCheckbox}>
-          <input type="checkbox" id="consentCheckbox" />
+          <input type="checkbox" id="consentCheckbox" required/>
           <label htmlFor="consentCheckbox">
             Я соглашаюсь на обработку персональных данных
           </label>

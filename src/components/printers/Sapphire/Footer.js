@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer} id="contacts">
       <h1>
-        <span className={styles.red}>НЕСРАВНИМЫЙ АНАЛОГ.</span> <br />
+        <span className={styles.blue}>НЕСРАВНИМЫЙ АНАЛОГ.</span> <br />
         ДОСТУПНАЯ ЦЕНА
       </h1>
       <ul className={styles.contacts}>

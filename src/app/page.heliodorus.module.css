@@ -84,6 +84,11 @@
   -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
 }
 
+.mainText button:hover {
+  background-color: #f9d94900;
+  border: 1px solid #F9DA49;
+}
+
 .mainBorder {
   border: 1px solid rgb(160, 160, 160);
   width: 1px;
@@ -103,6 +108,10 @@
   align-items: center;
   padding: 1vw;
   border-radius: 1vw;
+}
+
+.mainContent ul li a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.295);
 }
 
 .mainContent ul li p {
@@ -257,8 +266,13 @@
   box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
-  background-color: #ff002b00;
+  background-color: #f9d94900;
   width: 14%;
+}
+
+.sectionQuality button:hover, .sectionInterface button:hover {
+  border: none;
+  background-color: #F9DA49;
 }
 
 .sectionSpeed {
