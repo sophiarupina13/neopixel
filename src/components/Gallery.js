@@ -67,7 +67,7 @@ const Gallery = () => {
             <Image
               src={picture.image}
               alt="photo gallery"
-              width={500}
+              width={490}
               height={380}
               className={styles.galleryImage}
             />
