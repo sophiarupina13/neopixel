@@ -166,13 +166,31 @@
 
 .printersPrinters {
   margin-top: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2vw;
 }
 
 .printersList {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2.5vw;
   align-items: center;
+  justify-content: center;
+}
+
+.arrowsMobile {
+  background: #ffffff00;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.arrow1Printers {
+  scale: 0.4;
 }
 
 .printersListEl {
@@ -184,7 +202,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 60vw;
 }
 
 .printersListEl a {
@@ -197,13 +215,13 @@
 }
 
 .printer2 {
-  width: 43vw;
-  height: 45vw;
+  width: 40vw;
+  height: 42vw;
 }
 
 .printer3 {
-  width: 28vw;
-  height: 43vw;
+  width: 27vw;
+  height: 42vw;
 }
 
 .printersListEl h3 {
@@ -341,11 +359,17 @@
   flex-direction: column;
 }
 
+.galleryScrolling {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  margin-top: 2vw;
+}
+
 .picturesList {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  gap: 0.7vw;
 }
 
 .picturesList li:not(:first-child) {
@@ -354,33 +378,21 @@
 
 .galleryImage {
   border-radius: 2vw;
-  scale: 0.7;
-  margin-top: -10vw;
+  width: 68vw;
+  height: 48vw;
 }
 
-.scrollers {
-  display: flex;
-  align-self: center;
-  margin-top: -8vw;
-}
-
-.scrollers button {
-  background-color: #ffffff00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6vw;
-  height: 3vw;
-  padding: 0.5vh;
+.mobileScroll {
+  background: rgba(255, 255, 255, 0);
+  padding: 0;
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
-  scale: 3;
 }
 
 .arrow1 {
-  width: 0.7vw;
-  height: 1vw;
+  width: 3.8vw;
+  height: 5.3vw;
 }
 
 .sectionConsultationForm {
@@ -810,6 +822,7 @@
     font-size: 1vw;
     font-weight: 400;
     padding: 0.7vw 1.8vw;
+    margin-top: 0;
   }
   
   .printersListEl div button:hover {
@@ -925,12 +938,21 @@
     border-radius: 0.6vw;
     margin-top: 0;
     scale: 1;
+    width: auto;
+    height: auto;
   }
   
   .scrollers {
     display: flex;
     align-self: center;
     margin-top: 1vw;
+  }
+
+  .galleryScrolling {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
   }
   
   .scrollers button {
