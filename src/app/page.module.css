@@ -79,7 +79,7 @@
 }
 
 .sectionMain button {
-  margin-top: 20vw;
+  margin-top: 19vw;
 }
 
 .sectionMain button:hover {
@@ -307,8 +307,8 @@
 }
 
 .arrow {
-  width: 1vw;
-  height: 0.7vw;
+  width: 1.3vw;
+  height: 0.9vw;
 }
 
 .eventsList {
@@ -346,11 +346,16 @@
   text-wrap: wrap;
 }
 
+.eventImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .image {
   border-radius: 2.5vw;
   scale: 0.57;
   margin-top: -15vw;
-  margin-left: -29vw;
 }
 
 .sectionGallery {
@@ -415,15 +420,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2vw;
+  gap: 2.4vw;
 }
 
 .consultationFormInput {
-  padding: 2.4vw;
+  padding: 3vw;
   border-radius: 100vw;
   border: 1px solid white;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 2.6vw;
+  font-size: 2.8vw;
   font-weight: 400;
   color: rgb(202, 202, 202);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -458,9 +463,10 @@
 }
 
 .consultationFormCheckbox input[type="checkbox"] {
+  margin-top: 2vw;
   appearance: none;
-  width: 3vw;
-  height: 3vw;
+  width: 3.2vw;
+  height: 3.2vw;
   border: none;
   background-color: #ffffff;
   cursor: pointer;
@@ -483,14 +489,15 @@
 .consultationFormCheckbox input[type="checkbox"]:checked::before {
   content: "✔";
   color: white;
-  font-size: 2vw;
+  font-size: 2.4vw;
 }
 
 .consultationFormCheckbox label {
-  margin-left: 1vw;
+  margin-left: 1.7vw;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 2.2vw;
+  font-size: 2.4vw;
   cursor: pointer;
+  margin-top: 2vw;
 }
 
 .sectionFAQ {
@@ -502,7 +509,7 @@
 }
 
 .FAQList {
-  margin-top: 3vw;
+  margin-top: 4vw;
 }
 
 .FAQTextOpen {
@@ -512,7 +519,10 @@
 }
 
 .FAQTextOpen h3 {
-  font-size: 3.3vw;
+  font-size: 3.6vw;
+  width: 90%;
+  text-wrap: wrap;
+  text-align: left;
 }
 
 .FAQNotButton {
@@ -528,8 +538,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  height: 6vw;
   padding: 0.5vh;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -538,8 +548,8 @@
 }
 
 .arrow2 {
-  width: 1.2vw;
-  height: 0.7vw;
+  width: 1.75vw;
+  height: 1vw;
 }
 
 .rotated {
@@ -559,7 +569,7 @@
 .FAQ p {
   position: relative;
   padding-left: 3vw;
-  font-size: 2.4vw;
+  font-size: 3vw;
 }
 
 .FAQ p::before {
@@ -568,7 +578,7 @@
   font-size: 2vh;
   position: absolute;
   left: 0;
-  top: -0.7vw;
+  top: -0.9vw;
 }
 
 .FAQText:not(:last-child) {
@@ -581,9 +591,9 @@
 }
 
 .warning {
-  margin-top: 3vw;
+  margin-top: 4vw;
   color: #838383;
-  font-size: 2.1vw;
+  font-size: 2.6vw;
   font-weight: 500;
 }
 
@@ -909,6 +919,10 @@
     font-size: 1.05vw;
     font-weight: 600;
   }
+
+  .eventImage {
+    display: unset;
+  }
   
   .image {
     border-radius: 2.5vw;
@@ -1035,6 +1049,7 @@
   }
   
   .consultationFormCheckbox input[type="checkbox"] {
+    margin-top: 0;
     appearance: none;
     width: 1vw;
     height: 1vw;
@@ -1069,6 +1084,7 @@
     background-color: hsla(0, 0%, 100%, 0);
     font-size: 1vw;
     cursor: pointer;
+    margin-top: 0;
   }
   
   .sectionFAQ {
