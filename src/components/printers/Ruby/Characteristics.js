@@ -37,11 +37,11 @@ const Characteristics = () => {
           )
         );
       } else {
-        setPrinterSpecs(initialPrinterSpecs); // Возвращение к изначальному состоянию
+        setPrinterSpecs(initialPrinterSpecs);
       }
     };
 
-    handleResize(); // Проверка при загрузке
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {

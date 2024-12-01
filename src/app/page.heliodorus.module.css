@@ -1,5 +1,5 @@
 .header {
-  padding: 2vw 13vw;
+  padding: 2vw 10vw;
   display: flex;
   justify-content: space-between;
   background-color: #1e1f2198;
@@ -9,29 +9,54 @@
   width: 100%;
   backdrop-filter: blur(10px);
   z-index: 100;
-  transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
-}
-
-.header.transparent {
-  background-color: transparent;
-  backdrop-filter: none;
 }
 
 .logo {
-  width: 18vw;
+  width: 40vw;
 }
 
 .nav {
+  display: none;
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  -webkit-box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 41px 0px rgba(0,0,0,0);
+  box-shadow: 0px 0px 41px 0px rgba(0, 0, 0, 0);
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.mobileMenuOpen {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.527);
+  width: 100%;
+  height: 1000vw;
+  top: 0;
+  right: 0;
+}
+
+.mobileNav {
   display: flex;
-  flex-direction: row;
-  gap: 2vw;
+  flex-direction: column;
+  gap: 4vw;
+  position: fixed;
+  right: 0;
+  background-color: #1E1F21;
+  padding: 8vw 8vw 0 8vw;
+  height: 1000vw;
+  width: 40vw;
 }
 
 .navLink {
-  font-size: 1vw;
+  font-size: 3vw;
   font-weight: 700;
-  color: white;
   transition: color 500ms ease;
+  color: white;
 }
 
 .navLink.active {
@@ -39,7 +64,7 @@
 }
 
 .navLink:hover {
-  color: #F9DA49;
+  color: #F9DA49
 }
 
 .sectionMain {
@@ -48,44 +73,42 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 110vh;
+  height: 120vh;
   background-position-y: -10vh;
 }
 
 .mainContent {
   padding: 16vw 13vw 0 13vw;
-  display: grid;
-  grid-template-columns: 80% 5% 15%;
+  display: flex;
+  flex-direction: column;
 }
 
 .mainText {
-  margin-top: 15vw;
+  margin-top: 20vw;
   display: flex;
-  align-items: end;
-}
-
-.mainText h1 {
-  text-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .mainText p {
-  margin-top: 1vw;
+  margin-top: 3vw;
 }
 
-.yellow {
+.red {
   color: #F9DA49;
 }
 
 .mainText button {
-  margin-left: 12.1vw;
   background-color: #F9DA49;
   box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+  margin-top: 10vw;
 }
 
 .mainText button:hover {
-  background-color: #f9d94900;
+  background-color: #F9DA4900;
   border: 1px solid #F9DA49;
 }
 
@@ -97,7 +120,9 @@
 .mainContent ul {
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 3vw;
+  margin-top: 10vw;
+  align-items: center;
 }
 
 .mainContent ul li a {
@@ -106,8 +131,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1vw;
-  border-radius: 1vw;
+  padding: 4vw;
+  border-radius: 2vw;
+  width: 45vw;
 }
 
 .mainContent ul li a:hover {
@@ -117,28 +143,39 @@
 .mainContent ul li p {
   margin-top: 0.5vw;
   color: #b9b9b9;
-  font-size: 0.8vw;
+  font-size: 3vw;
   font-weight: 600;
 }
 
 .sectionDescription {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  padding: 1vw 13vw 6vw 13vw;
-  background-image: url("/img/printers/heliodorus-bg.svg");
+  display: flex;
+  flex-direction: column;
+  padding: 4vw 13vw 6vw 13vw;
+  background-image: url("/img/printers/heliodorus.svg");
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   background-position-y: 13vw;
 }
 
+.sectionDescription h2 {
+  margin-top: -15vw;
+  margin-bottom: 6vw;
+}
+
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+
 .descriptionList li p {
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 .descriptionList li {
   position: relative;
-  padding-left: 1vw;
+  padding-left: 3vw;
 }
 
 .descriptionList li::before {
@@ -147,25 +184,26 @@
   font-size: 2vh;
   position: absolute;
   left: 0;
-  top: 0;
+  top: -1vw;
 }
 
 .sectionCharacteristics {
-  display: grid;
-  grid-template-columns: 35% 65%;
+  display: flex;
+  flex-direction: column;
   padding: 6vw 13vw;
   background-color: #171616;
 }
 
 .characteristicsList {
+  margin-top: 4vw;
   display: flex;
   flex-direction: column;
-  gap: 0.2vw;
+  gap: 1vw;
+  align-items: flex-start;
 }
 
 .characteristicsList li {
   display: flex;
-  flex-direction: row;
   gap: 1vw;
   align-items: center;
 }
@@ -173,14 +211,14 @@
 .characteristicsList li h3 {
   flex: 1;
   text-wrap: nowrap;
-  font-size: 1.2vw;
-  text-align: right;
+  font-size: 3vw;
+  text-align: left;
 }
 
 .characteristicsList li p {
   flex: 1;
   text-wrap: nowrap;
-  font-size: 1vw;
+  font-size: 2.8vw;
   color: #CECECE;
 }
 
@@ -195,7 +233,7 @@
 }
 
 .border {
-  border: 3px solid rgb(236, 236, 236);
+  border: 1px solid rgb(236, 236, 236);
   margin: 0.7vw 0 2vw 0;
 }
 
@@ -206,18 +244,34 @@
 }
 
 .picturesList li h3 {
-  margin-top: -3vw;
-  margin-left: 1vw;
+  margin-top: -13vw;
+  margin-left: 21vw;
+  z-index: 1000;
+  position: relative;
 }
 
 .usageImage, .examplesImage {
-  border-radius: 0.6vw;
+  border-radius: 3vw;
+}
+
+.usageImage {
+  scale: 0.7;
+  margin: -10vw 0;
+}
+
+.examplesImage {
+  scale: 0.83;
+  margin: -5vw 0;
 }
 
 .scrollers {
   display: flex;
   align-self: center;
-  margin-top: 2vw;
+  margin-top: 9vw;
+}
+
+#scrollers {
+  margin-top: 0.4vw;
 }
 
 .scrollers button {
@@ -225,8 +279,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2vw;
-  height: 2vw;
+  width: 10vw;
+  height: 10vw;
   padding: 0.5vh;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -238,8 +292,8 @@
 }
 
 .arrow1 {
-  width: 0.7vw;
-  height: 1vw;
+  width: 3.5vw;
+  height: 5vw;
 }
 
 .sectionQuality {
@@ -257,17 +311,25 @@
 .sectionQuality p, .sectionSpeed p, .sectionVlare p, .sectionInterface p, .sectionConvenience p {
   margin-top: 1.5vw;
   color: #CECECE;
-  width: 35vw;
+  margin-top: 3vw;
+}
+
+.sectionQuality p, .sectionSpeed p, .sectionInterface p {
+  width: 45vw;
+}
+
+.sectionVlare p, .sectionConvenience p {
+  width: 70vw;
 }
 
 .sectionQuality button, .sectionInterface button {
-  margin-top: 2.5vw;
   border: 1px solid #F9DA49;
   box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
-  background-color: #f9d94900;
-  width: 14%;
+  background-color: #F9DA4900;
+  width: 45%;
+  margin-top: 8vw;
 }
 
 .sectionQuality button:hover, .sectionInterface button:hover {
@@ -332,8 +394,11 @@
 }
 
 .sectionConsultationForm h2 {
-  font-size: 2.7vw;
+  font-size: 6vw;
   font-weight: 500;
+  text-wrap: wrap;
+  text-align: center;
+  margin-bottom: 3vw;
 }
 
 .consultationForm {
@@ -341,15 +406,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8vw;
+  gap: 2.3vw;
 }
 
 .consultationFormInput {
-  padding: 1.2vw;
+  padding: 3vw;
   border-radius: 100vw;
-  border: 2px solid white;
+  border: 1px solid white;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 1vw;
+  font-size: 2.8vw;
   font-weight: 400;
   color: rgb(202, 202, 202);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
@@ -357,7 +422,7 @@
 
 .consultationFormInput:focus {
   outline: none;
-  border: 2px solid #F9DA49;
+  border: 1px solid #F9DA49;
 }
 
 .consultationFormInput::placeholder {
@@ -373,10 +438,9 @@
 }
 
 .consultationForm button {
-  margin-top: 0.5vw;
-}
-
-.consultationForm button {
+  margin-top: 2.4vw;
+  font-size: 3.3vw;
+  padding: 2.8vw 6vw;
   background-color: #F9DA49;
   box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
   -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
@@ -389,9 +453,10 @@
 }
 
 .consultationFormCheckbox input[type="checkbox"] {
+  margin-top: 2vw;
   appearance: none;
-  width: 1vw;
-  height: 1vw;
+  width: 3.2vw;
+  height: 3.2vw;
   border: none;
   background-color: #ffffff;
   cursor: pointer;
@@ -414,15 +479,15 @@
 .consultationFormCheckbox input[type="checkbox"]:checked::before {
   content: "✔";
   color: white;
-  font-size: 16px;
-  font-size: 0.8vw;
+  font-size: 2.4vw;
 }
 
 .consultationFormCheckbox label {
-  margin-left: 0.6vw;
+  margin-left: 1.7vw;
   background-color: hsla(0, 0%, 100%, 0);
-  font-size: 1vw;
+  font-size: 2.4vw;
   cursor: pointer;
+  margin-top: 2vw;
 }
 
 .footer {
@@ -432,31 +497,535 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 6vw 13vw;
+  padding: 6vw 10vw;
 }
 
 .footer h1 {
   align-self: center;
   text-align: center;
+  font-size: 5.8vw;
 }
 
 .contacts {
   margin-top: 6vw;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-self: center;
 }
 
 .contacts li {
   display: flex;
   align-items: center;
-  gap: 0.5vh;
+}
+
+.contacts li:not(:last-child) {
+  margin-bottom: -4vw;
 }
 
 .footer p {
   font-weight: 600;
-  font-size: 1.4vw;
+  font-size: 3vw;
 }
 
 .footerIcon {
-  scale: 0.7;
+  scale: 0.5;
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    padding: 2vw 13vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1f2198;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
+  }
+  
+  .header.transparent {
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+  
+  .logo {
+    width: 18vw;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+  
+  .navLink {
+    font-size: 1vw;
+    font-weight: 700;
+    color: white;
+    transition: color 500ms ease;
+  }
+  
+  .navLink.active {
+    color: #F9DA49;
+  }
+  
+  .navLink:hover {
+    color: #F9DA49;
+  }
+
+  .mobileMenu, .menu {
+    display: none;
+  }
+  
+  .sectionMain {
+    background-image: url("/img/printers/heliodorus.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 110vh;
+    background-position-y: -10vh;
+  }
+  
+  .mainContent {
+    padding: 16vw 13vw 0 13vw;
+    display: grid;
+    grid-template-columns: 80% 5% 15%;
+  }
+  
+  .mainText {
+    margin-top: 15vw;
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    text-align: start;
+  }
+  
+  .mainText p {
+    margin-top: 1vw;
+  }
+  
+  .red {
+    color: #F9DA49;
+  }
+  
+  .mainText button {
+    margin-left: 22vw;
+    background-color: #F9DA49;
+    box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    margin-top: 0;
+  }
+  
+  .mainText button:hover {
+    background-color: #F9DA4900;
+    border: 1px solid #F9DA49;
+  }
+  
+  .mainBorder {
+    border: 1px solid rgb(160, 160, 160);
+    width: 1px;
+  }
+  
+  .mainContent ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 0;
+    align-items: unset;
+  }
+  
+  .mainContent ul li a {
+    background-color: #17161666;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    border-radius: 1vw;
+    width: auto;
+  }
+  
+  .mainContent ul li a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.295);
+  }
+  
+  .mainContent ul li p {
+    margin-top: 0.5vw;
+    color: #b9b9b9;
+    font-size: 0.8vw;
+    font-weight: 600;
+  }
+  
+  .sectionDescription {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    padding: 1vw 13vw 6vw 13vw;
+    background-image: url("/img/printers/heliodorus-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position-y: 13vw;
+  }
+
+  .sectionDescription h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .descriptionList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .descriptionList li p {
+    font-size: 1vw;
+  }
+  
+  .descriptionList li {
+    position: relative;
+    padding-left: 1vw;
+  }
+  
+  .descriptionList li::before {
+    content: "•";
+    color: #F9DA49;
+    font-size: 2vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .sectionCharacteristics {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 6vw 13vw;
+    background-color: #171616;
+  }
+  
+  .characteristicsList {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+    align-items: unset;
+  }
+  
+  .characteristicsList li {
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    align-items: center;
+  }
+  
+  .characteristicsList li h3 {
+    flex: 1;
+    text-wrap: nowrap;
+    font-size: 1.2vw;
+    text-align: right;
+  }
+  
+  .characteristicsList li p {
+    flex: 1;
+    text-wrap: nowrap;
+    font-size: 1vw;
+    color: #CECECE;
+  }
+  
+  .sectionUsage, .sectionExamples {
+    padding: 6vw 13vw;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sectionExamples {
+    background-color: #171616;
+  }
+  
+  .border {
+    border: 3px solid rgb(236, 236, 236);
+    margin: 0.7vw 0 2vw 0;
+  }
+  
+  .picturesList {
+    display: flex;
+    align-self: center;
+    gap: 0.7vw;
+  }
+  
+  .picturesList li h3 {
+    margin-top: -3vw;
+    margin-left: 1vw;
+  }
+  
+  .usageImage, .examplesImage {
+    border-radius: 0.6vw;
+  }
+
+  .usageImage {
+    scale: 1;
+    margin: 0;
+  }
+  
+  .examplesImage {
+    scale: 1;
+    margin: 0;
+  }
+  
+  .scrollers {
+    display: flex;
+    align-self: center;
+    margin-top: 2vw;
+  }
+
+  #scrollers {
+    margin-top: 0.8vw;
+  }
+  
+  .scrollers button {
+    background-color: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2vw;
+    height: 2vw;
+    padding: 0.5vh;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  
+  .scrollers button:hover {
+    scale: 1;
+  }
+  
+  .arrow1 {
+    width: 0.7vw;
+    height: 1vw;
+  }
+  
+  .sectionQuality {
+    padding: 6vw 13vw;
+    background-image: url("/img/printers/quality.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionQuality p, .sectionSpeed p, .sectionVlare p, .sectionInterface p, .sectionConvenience p {
+    margin-top: 1.5vw;
+    color: #CECECE;
+    width: 35vw;
+    margin-top: 0;
+  }
+  
+  .sectionQuality button, .sectionInterface button {
+    margin-top: 2.5vw;
+    border: 1px solid #F9DA49;
+    box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    background-color: #F9DA4900;
+    width: 14%;
+  }
+  
+  .sectionQuality button:hover, .sectionInterface button:hover {
+    border: none;
+    background-color: #F9DA49;
+  }
+  
+  .sectionSpeed {
+    padding: 6vw 13vw;
+    background-image: url("/img/printers/speed.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionInterface {
+    padding: 6vw 13vw;
+    background-image: url("/img/printers/interface.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionVlare {
+    padding: 6vw 13vw;
+    background-image: url("/img/printers/vlare.png");
+    background-size: cover;
+    background-position: 58.5%;
+    background-repeat: no-repeat;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionConvenience {
+    padding: 6vw 13vw;
+    background-image: url("/img/printers/convenience.png");
+    background-size: cover;
+    background-position: 70%;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sectionConsultationForm {
+    padding: 6vw 13vw;
+    background-color: #171616;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sectionConsultationForm h2 {
+    font-size: 2.7vw;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  
+  .consultationForm {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8vw;
+  }
+  
+  .consultationFormInput {
+    padding: 1.2vw;
+    border-radius: 100vw;
+    border: 2px solid white;
+    background-color: hsla(0, 0%, 100%, 0);
+    font-size: 1vw;
+    font-weight: 400;
+    color: rgb(202, 202, 202);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+  
+  .consultationFormInput:focus {
+    outline: none;
+    border: 2px solid #F9DA49;
+  }
+  
+  .consultationFormInput::placeholder {
+    color: rgb(202, 202, 202);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  }
+  
+  .consultationFormCheckbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .consultationForm button {
+    background-color: #F9DA49;
+    box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -webkit-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    -moz-box-shadow: -1px 2px 27px -4px rgba(249,218,73,0.6);
+    margin-top: 0.5vw;
+    font-size: 1.1vw;
+    padding: 0.9vw 2.4vw;
+  }
+  
+  .consultationForm button:hover {
+    background-color: #26a9e100;
+    border: 1px solid #F9DA49;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"] {
+    appearance: none;
+    width: 1vw;
+    height: 1vw;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.3vh;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:checked {
+    background-color: #F9DA49;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .consultationFormCheckbox input[type="checkbox"]:checked::before {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    font-size: 0.8vw;
+  }
+  
+  .consultationFormCheckbox label {
+    margin-left: 0.6vw;
+    background-color: hsla(0, 0%, 100%, 0);
+    font-size: 1vw;
+    cursor: pointer;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-image: url('/img/footer.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 6vw 13vw;
+  }
+  
+  .footer h1 {
+    align-self: center;
+    text-align: center;
+  }
+  
+  .contacts {
+    margin-top: 6vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .contacts li {
+    display: flex;
+    align-items: center;
+    gap: 0.5vh;
+  }
+  
+  .footer p {
+    font-weight: 600;
+    font-size: 1.4vw;
+  }
+  
+  .footerIcon {
+    scale: 0.7;
+  }
 }

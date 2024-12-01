@@ -1,6 +1,8 @@
+"use client";
 import styles from "../../../app/page.heliodorus.module.css";
+import { useState, useEffect } from "react";
 
-const printerSpecs = [
+const initialPrinterSpecs  = [
   { title: "Экран экспозиции: ", description: "5,5 дюйма, монохромный" },
   { title: "Размеры печати: ", description: "8 x 13,2 x 8 см (ВШГ)" },
   { title: "Коэф-т пропускания света: ", description: "10%" },
@@ -22,6 +24,31 @@ const printerSpecs = [
 
 
 const Characteristics = () => {
+  const [printerSpecs, setPrinterSpecs] = useState(initialPrinterSpecs);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1000) {
+        setPrinterSpecs((prevSpecs) =>
+          prevSpecs.map((spec) =>
+            spec.title === "Панель управления: "
+              ? { ...spec, description: "сенсорный TFT-дисплей, 3,5 дюйма" }
+              : spec
+          )
+        );
+      } else {
+        setPrinterSpecs(initialPrinterSpecs);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <section className={styles.sectionCharacteristics} id="characteristics">
       <h2>ХАРАКТЕРИСТИКИ<br></br>ПРИНТЕРА</h2>

@@ -244,8 +244,8 @@
 }
 
 .picturesList li h3 {
-  margin-top: -11vw;
-  margin-left: 19vw;
+  margin-top: -13vw;
+  margin-left: 21vw;
   z-index: 1000;
   position: relative;
 }
@@ -267,7 +267,7 @@
 .scrollers {
   display: flex;
   align-self: center;
-  margin-top: 5vw;
+  margin-top: 9vw;
 }
 
 #scrollers {
@@ -311,8 +311,15 @@
 .sectionQuality p, .sectionSpeed p, .sectionVlare p, .sectionInterface p, .sectionConvenience p {
   margin-top: 1.5vw;
   color: #CECECE;
-  width: 35vw;
   margin-top: 3vw;
+}
+
+.sectionQuality p, .sectionSpeed p, .sectionInterface p {
+  width: 45vw;
+}
+
+.sectionVlare p, .sectionConvenience p {
+  width: 70vw;
 }
 
 .sectionQuality button, .sectionInterface button {
