@@ -95,7 +95,7 @@
   margin-top: 3vw;
 }
 
-.red {
+.blue {
   color: #4345F5;
 }
 
@@ -504,6 +504,7 @@
   align-self: center;
   text-align: center;
   font-size: 5.8vw;
+  line-height: normal;
 }
 
 .contacts {
@@ -608,12 +609,12 @@
     margin-top: 1vw;
   }
   
-  .red {
+  .blue {
     color: #4345F5;
   }
   
   .mainText button {
-    margin-left: 22vw;
+    margin-left: 17vw;
     background-color: #4345F5;
     box-shadow: -1px 2px 27px -4px rgba(67,69,245,0.6);
     -webkit-box-shadow: -1px 2px 27px -4px rgba(67,69,245,0.6);
@@ -811,7 +812,7 @@
   
   .sectionQuality {
     padding: 6vw 13vw;
-    background-image: url("/img/printers/quality.png");
+    background-image: url("/img/printers/quality_blue.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -822,10 +823,9 @@
   }
   
   .sectionQuality p, .sectionSpeed p, .sectionVlare p, .sectionInterface p, .sectionConvenience p {
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     color: #CECECE;
     width: 35vw;
-    margin-top: 0;
   }
   
   .sectionQuality button, .sectionInterface button {
@@ -857,7 +857,7 @@
   
   .sectionInterface {
     padding: 6vw 13vw;
-    background-image: url("/img/printers/interface.png");
+    background-image: url("/img/printers/interface_blue.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1006,18 +1006,26 @@
   .footer h1 {
     align-self: center;
     text-align: center;
+    font-size: 3.2vw;
+    line-height: 100%;
   }
   
   .contacts {
     margin-top: 6vw;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-self: unset;
   }
   
   .contacts li {
     display: flex;
     align-items: center;
     gap: 0.5vh;
+  }
+
+  .contacts li:not(:last-child) {
+    margin-bottom: 0;
   }
   
   .footer p {

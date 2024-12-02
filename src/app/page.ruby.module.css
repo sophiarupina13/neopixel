@@ -504,6 +504,7 @@
   align-self: center;
   text-align: center;
   font-size: 5.8vw;
+  line-height: normal;
 }
 
 .contacts {
@@ -822,10 +823,9 @@
   }
   
   .sectionQuality p, .sectionSpeed p, .sectionVlare p, .sectionInterface p, .sectionConvenience p {
-    margin-top: 1.5vw;
+    margin-top: 1vw;
     color: #CECECE;
     width: 35vw;
-    margin-top: 0;
   }
   
   .sectionQuality button, .sectionInterface button {
@@ -1006,18 +1006,26 @@
   .footer h1 {
     align-self: center;
     text-align: center;
+    font-size: 3.2vw;
+    line-height: 100%;
   }
   
   .contacts {
     margin-top: 6vw;
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    align-self: unset;
   }
   
   .contacts li {
     display: flex;
     align-items: center;
     gap: 0.5vh;
+  }
+
+  .contacts li:not(:last-child) {
+    margin-bottom: 0;
   }
   
   .footer p {

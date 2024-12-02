@@ -1,6 +1,6 @@
 "use client";
 import styles from "../../../app/page.heliodorus.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const pictures = [
@@ -44,16 +44,34 @@ const pictures = [
 
 const Examples = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [step, setStep] = useState(3);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1000) {
+        setStep(1);
+      } else {
+        setStep(3);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleScroll = (direction) => {
     if (direction === "left" && currentIndex > 0) {
-      setCurrentIndex(currentIndex - 3);
-    } else if (direction === "right" && currentIndex < pictures.length - 3) {
-      setCurrentIndex(currentIndex + 3);
+      setCurrentIndex(currentIndex - step);
+    } else if (direction === "right" && currentIndex < pictures.length - step) {
+      setCurrentIndex(currentIndex + step);
     }
   };
 
-  const visiblePictures = pictures.slice(currentIndex, currentIndex + 3);
+  const visiblePictures = pictures.slice(currentIndex, currentIndex + step);
 
   return (
     <section className={styles.sectionExamples} id="examples">
@@ -74,7 +92,7 @@ const Examples = () => {
           </li>
         ))}
       </ul>
-      <div className={styles.scrollers}>
+      <div className={styles.scrollers} id={styles.scrollers}>
         <button onClick={() => handleScroll("left")}>
           <Image
             src="/img/arrow-left.png"
