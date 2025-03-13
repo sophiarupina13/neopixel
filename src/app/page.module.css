@@ -1089,14 +1089,14 @@
     border-radius: 0.6vw;
     margin-top: 0;
     scale: 1;
-    width: auto;
-    height: auto;
+    width: 23vw;
+    height: 90%;
   }
   
   .scrollers {
     display: flex;
     align-self: center;
-    margin-top: 1vw;
+    margin-top: -1vw;
   }
 
   .galleryScrolling {
